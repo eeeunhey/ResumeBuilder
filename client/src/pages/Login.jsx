@@ -2,13 +2,9 @@ import { useState } from "react";
 import { Lock, Mail, User2Icon } from "lucide-react";
 
 const Login = () => {
-  // URL에서 ?query= 값 가져오기 ("login" 또는 "register")
-  const [state, setState] = useState(() => {
-    const params = new URLSearchParams(window.location.search);
-    return params.get("query") || "login";
-  });
-
-  // 폼 데이터 상태
+  const query = new URLSearchParams(window.location.search)
+  const urlState = query.get('state') 
+  const [state, setState] = useState(urlState ||"login")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
