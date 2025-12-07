@@ -40,10 +40,19 @@ const PersonalInfoForm = ({
             onChange={(e) => handleChange("image", e.target.files[0])}
           />
         </label>
-        {/* {typeof data.image === "object" && 
-            <div>
+        {typeof data?.image === "object" && 
+            <div className="flex flex-col gap-1 pl-4 text-sm">
                 <p>배경 제거</p>
-            </div>} */}
+                <label className="">
+                  <input />
+                  <div>
+
+                  </div>
+                  <span>
+
+                  </span>
+                </label>
+            </div>}
       </div>
     </div>
   );
