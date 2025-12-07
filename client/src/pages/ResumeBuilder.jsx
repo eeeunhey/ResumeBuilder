@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const initialResumeData = {
@@ -19,6 +19,12 @@ const ResumeBuilder = () => {
   const { resumeId } = useParams();
 
   const [resumeData, setResumeData] = useState(initialResumeData);
+
+  const loadExistingResume = () => {
+
+  }
+
+  useEffect(()=>{},[])
 
   return <div></div>;
 };
