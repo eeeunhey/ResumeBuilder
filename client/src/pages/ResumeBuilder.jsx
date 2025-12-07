@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { dummyResumeData } from "../assets/assets";
+import PersonalInfoForm from "../components/PersonalInfoForm";
 import { Link } from "react-router-dom";
 import {
   ArrowLeftIcon,
@@ -127,16 +128,19 @@ const ResumeBuilder = () => {
                 </div>
 
               </div>
-              {sections.map((menu) => {
+              {/* {sections.map((menu) => {
                 return <p key={menu.id}>{menu.name}</p>;
-              })}
+              })} */}
             </div>
           </div>
 
           {/* 오른쪽 부분 - 미리보기 부분 */}
           <div>
             {activeSection.id === 'personal' && (
-              <div></div>
+              <div>
+                <PersonalInfoForm />
+
+              </div>
             )}
           </div>
         </div>
