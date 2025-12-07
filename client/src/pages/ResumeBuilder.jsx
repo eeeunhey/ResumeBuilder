@@ -1,25 +1,15 @@
-import { useState } from "react"
-import { useParams } from "react-router-dom"
+import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const ResumeBuilder = () => {
+      const {resumeId} = useParams();
 
-  const {resumeId} = useParams();
-
-  const [resumeData, setResumeData] = useState({
-    _id: '',
-    title:'',
-    personal_info: {}, 
-    professional_summary: "",
-    experience: [],
-    education: [],
-    project: [],
-    skills:[],
-    template: "classic",
-    accent_color: "#3B83F6",
-    public: false,
-  })
-  
+      const [resumeData, setResumeData] = useState({
+        
+      })
   return (
+
+    
     <div>
 
     </div>
