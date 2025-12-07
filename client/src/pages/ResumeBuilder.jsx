@@ -54,7 +54,6 @@ const ResumeBuilder = () => {
     { id: "skills", name: "Skills", icon: Sparkles },
   ];
 
-
   const activeSection = sections[activeSectionIndex];
 
   useEffect(() => {
@@ -111,10 +110,16 @@ const ResumeBuilder = () => {
                     <button
                       onClick={() =>
                         setActiveSectionIndex((prevIndex) =>
-                          Math.min(prevIndex + 1, sections.length -1))} className={`
+                          Math.min(prevIndex + 1, sections.length - 1)
+                        )
+                      }
+                      className={`
                             flex items-center gap-1 p-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all 
-                            ${activeSectionIndex === sections.length -1 && 'opacity-50'}`}
-                      disabled={activeSectionIndex === sections.length -1}
+                            ${
+                              activeSectionIndex === sections.length - 1 &&
+                              "opacity-50"
+                            }`}
+                      disabled={activeSectionIndex === sections.length - 1}
                     >
                       다음
                       <ChevronRight className="size-4" />
@@ -123,10 +128,7 @@ const ResumeBuilder = () => {
                 </div>
 
                 {/* Form Content */}
-                <div className="space-y-6">
-
-                </div>
-
+                <div className="space-y-6"></div>
               </div>
               {/* {sections.map((menu) => {
                 return <p key={menu.id}>{menu.name}</p>;
@@ -136,10 +138,12 @@ const ResumeBuilder = () => {
 
           {/* 오른쪽 부분 - 미리보기 부분 */}
           <div>
-            {activeSection.id === 'personal' && (
+            {activeSection.id === "personal" && (
               <div>
-                <PersonalInfoForm />
-
+                <PersonalInfoForm
+                  data={resumeData.personal_info}
+                  removeBackground={removeBackground}
+                />
               </div>
             )}
           </div>
