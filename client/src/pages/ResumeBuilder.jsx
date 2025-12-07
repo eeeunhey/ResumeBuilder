@@ -53,6 +53,7 @@ const ResumeBuilder = () => {
     { id: "skills", name: "Skills", icon: Sparkles },
   ];
 
+
   const activeSection = sections[activeSectionIndex];
 
   useEffect(() => {
@@ -88,7 +89,6 @@ const ResumeBuilder = () => {
                 />
 
                 {/* Section Navigation */}
-
                 <div className="flex justify-between items-center mb-6 border-b border-gray-300 py-1">
                   <div></div>
 
@@ -97,7 +97,7 @@ const ResumeBuilder = () => {
                       <button
                         onClick={() =>
                           setActiveSectionIndex((prevIndex) =>
-                            Math.min(prevIndex - 1, 0)
+                            Math.max(prevIndex - 1, 0)
                           )
                         }
                         className="flex items-center gap-1 p-3 rounded-lg text-sm font-medium text-gray-600 hover-gray-50 transition-all"
@@ -115,12 +115,17 @@ const ResumeBuilder = () => {
                             ${activeSectionIndex === sections.length -1 && 'opacity-50'}`}
                       disabled={activeSectionIndex === sections.length -1}
                     >
-
                       다음
                       <ChevronRight className="size-4" />
                     </button>
                   </div>
                 </div>
+
+                {/* Form Content */}
+                <div className="space">
+
+                </div>
+
               </div>
               {sections.map((menu) => {
                 return <p key={menu.id}>{menu.name}</p>;
