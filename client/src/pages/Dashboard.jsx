@@ -3,8 +3,9 @@ import Navbar from '../components/Navbar'
 const Dashboard = () => {
   return (
     <div>
-      <Navbar />
-      Dashboard Page
+      <div className="max-w-7xl ">
+      <h3>Dashboard</h3>
+      </div>
     </div>
   );
 };
