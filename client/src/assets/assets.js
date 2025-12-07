@@ -1,237 +1,286 @@
 import dummy_profile from './dummy_profile.png'
 
 export const dummyResumeData = [
-    {
-        // ----------------------------------------------------- Resume 1 ------------------------------------------------------
-        personal_info: {
-            full_name: "Alex Smith",
-            email: "alex@example.com",
-            phone: "0 123456789",
-            location: "NY, USA",
-            linkedin: "https://www.linkedin.com",
-            website: "https://www.example.com",
-            profession: "Full Stack Developer",
-            image: dummy_profile
-        },
-        _id: "68d2a31a1c4dd38875bb037e",
-        userId: "68c180acdf1775dfd02c6d87",
-        title: "Alex's Resume",
-        public: true,
-        professional_summary: "Highly analytical Data Analyst with 6 years of experience transforming complex datasets into actionable insights using SQL, Python, and advanced visualization tools. ",
-        skills: ["JavaScript", "React JS", "Full Stack Development", "Git", "GitHub", "NextJS", "Express", "NodeJS", "TypeScript"],
-        experience: [
-            {
-                company: "Example Technologies.",
-                position: "Senior Full Stack Developer",
-                start_date: "2023-06",
-                end_date: "Present",
-                description: "Architected, developed, and deployed innovative full-stack applications at Example Technologies.\ncreating robust back-end systems and intuitive front- end interfaces to deliver meaningful digital experiences ",
-                is_current: true,
-                _id: "68d2a31a1c4dd38875bb037f"
-            },
-            {
-                company: "Example Technologies.",
-                position: "Full Stack Developer",
-                start_date: "2019-08",
-                end_date: "2023-05",
-                description: "Engineered and deployed scalable full-stack web applications for Example Technologies, translating complex requirements into robust front-end interfaces and efficient back-end services.",
-                is_current: false,
-                _id: "68d4f7abc8f0d46dc8a8b114"
-            }
-        ],
-        education: [
-            {
-                institution: "Example Institute of Technology",
-                degree: "B.TECH",
-                field: "CSE",
-                graduation_date: "2023-05",
-                gpa: "8.7",
-                _id: "68d2a31a1c4dd38875bb0380"
-            },
-            {
-                institution: "Example Public School",
-                degree: "HIGHER SECONDARY",
-                field: "PCM",
-                graduation_date: "2019-03",
-                gpa: "",
-                _id: "68d2a31a1c4dd38875bb0381"
-            },
-            {
-                institution: "Example Academy",
-                degree: "SECONDARY SCHOOL",
-                field: "",
-                graduation_date: "2017-03",
-                gpa: "",
-                _id: "68d2a31a1c4dd38875bb0382"
-            }
-        ],
-        template: "minimal-image",
-        accent_color: "#14B8A6",
-        project: [
-            {
-                name: "Team Task Management System",
-                type: "Web Application (Productivity Tool)",
-                description: "TaskTrackr is a collaborative task management system designed for teams to create, assign, track, and manage tasks in real time. ",
-                _id: "68d4f882c8f0d46dc8a8b139"
-            },
-            {
-                name: "EduHub - Online Learning Platform",
-                type: "Web Application (EdTech Platform)",
-                description: "EduHub is an online learning platform where instructors can create courses with video lessons, quizzes, and downloadable resources.",
-                _id: "68d4f89dc8f0d46dc8a8b147"
-            }
-        ],
-        updatedAt: "2025-09-23T13:39:38.395Z",
-        createdAt: "2025-09-23T13:39:38.395Z"
+  {
+    // ----------------------------------------------------- Resume 1 ------------------------------------------------------
+    personal_info: {
+      full_name: "김도현",
+      email: "alex@example.com",
+      phone: "010-1234-5678",
+      location: "서울, 대한민국",
+      linkedin: "https://www.linkedin.com",
+      website: "https://www.example.com",
+      profession: "풀스택 개발자",
+      image: dummy_profile
     },
-    {
-        // ----------------------------------------------------- Resume 2 ------------------------------------------------------
-        personal_info: {
-            full_name: "Jordan Lee",
-            email: "jordan.lee@example.com",
-            phone: "0 987654321",
-            location: "San Francisco, CA, USA",
-            linkedin: "https://www.linkedin.com/in/jordanlee",
-            website: "https://www.jordanlee.dev",
-            profession: "Frontend Engineer",
-            image: dummy_profile
-        },
-        _id: "78e3b42c2d5ff49286cc148f",
-        userId: "78d2e0bdcf2886efg03e7e98",
-        title: "Jordan's Resume",
-        public: true,
-        professional_summary: "Creative and detail-oriented Frontend Engineer with 5+ years of experience crafting responsive, user-centric web applications using React, Vue, and modern CSS frameworks.",
-        skills: ["HTML5", "CSS3", "JavaScript", "React", "Vue.js", "SASS", "Tailwind CSS", "Figma", "Web Accessibility", "REST APIs"],
-        experience: [
-            {
-                company: "TechSpark Inc.",
-                position: "Lead Frontend Engineer",
-                start_date: "2022-02",
-                end_date: "Present",
-                description: "Leading a team of frontend developers to build accessible and scalable user interfaces. Collaborated with UX teams to implement design systems and improve frontend performance.",
-                is_current: true,
-                _id: "78e3b42c2d5ff49286cc1490"
-            },
-            {
-                company: "PixelForge Labs",
-                position: "Frontend Developer",
-                start_date: "2018-09",
-                end_date: "2022-01",
-                description: "Developed reusable UI components using React and Vue.js. Worked closely with backend teams to integrate REST APIs and optimize SPA performance.",
-                is_current: false,
-                _id: "78e3b42c2d5ff49286cc1491"
-            }
-        ],
-        education: [
-            {
-                institution: "University of Digital Arts",
-                degree: "B.Sc.",
-                field: "Computer Science",
-                graduation_date: "2018-06",
-                gpa: "3.8",
-                _id: "78e3b42c2d5ff49286cc1492"
-            },
-            {
-                institution: "Lincoln High School",
-                degree: "High School Diploma",
-                field: "Science",
-                graduation_date: "2014-05",
-                gpa: "",
-                _id: "78e3b42c2d5ff49286cc1493"
-            }
-        ],
-        template: "minimal-image",
-        accent_color: "#6366F1",
-        project: [
-            {
-                name: "FitTrack - Fitness Dashboard",
-                type: "Web Application (Health & Fitness)",
-                description: "FitTrack is a fitness analytics dashboard that allows users to log workouts, track progress, and visualize performance through interactive charts.",
-                _id: "78e3b42c2d5ff49286cc1494"
-            },
-            {
-                name: "ShopEase - E-commerce UI Kit",
-                type: "Frontend UI Kit",
-                description: "ShopEase is a modular e-commerce frontend template with ready-to-use components for product listing, cart management, and responsive navigation.",
-                _id: "78e3b42c2d5ff49286cc1495"
-            }
-        ],
-        updatedAt: "2025-09-25T15:10:21.184Z",
-        createdAt: "2025-09-25T15:10:21.184Z"
+    _id: "68d2a31a1c4dd38875bb037e",
+    userId: "68c180acdf1775dfd02c6d87",
+    title: "김도현 이력서",
+    public: true,
+    professional_summary:
+      "6년간 SQL, Python, 시각화 도구를 활용하여 복잡한 데이터를 실용적인 인사이트로 전환해온 데이터 기반 풀스택 개발자입니다.",
+    skills: [
+      "JavaScript",
+      "React.js",
+      "Full Stack Development",
+      "Git",
+      "GitHub",
+      "Next.js",
+      "Express",
+      "Node.js",
+      "TypeScript"
+    ],
+    experience: [
+      {
+        company: "Example Technologies",
+        position: "시니어 풀스택 개발자",
+        start_date: "2023-06",
+        end_date: "Present",
+        description:
+          "백엔드 아키텍처 설계와 프론트엔드 UI 개발을 포함한 핵심 웹서비스 구축을 주도했습니다. 확장성과 안정성을 고려한 시스템을 설계하고 구현했습니다.",
+        is_current: true,
+        _id: "68d2a31a1c4dd38875bb037f"
+      },
+      {
+        company: "Example Technologies",
+        position: "풀스택 개발자",
+        start_date: "2019-08",
+        end_date: "2023-05",
+        description:
+          "사용자 요구사항 분석 후 프론트엔드와 백엔드 전반의 기능을 개발하며 효율적인 웹 서비스를 구축했습니다.",
+        is_current: false,
+        _id: "68d4f7abc8f0d46dc8a8b114"
+      }
+    ],
+    education: [
+      {
+        institution: "한국 IT 공과대학",
+        degree: "공학 학사",
+        field: "컴퓨터공학",
+        graduation_date: "2023-05",
+        gpa: "4.3/4.5",
+        _id: "68d2a31a1c4dd38875bb0380"
+      },
+      {
+        institution: "서울 공립고등학교",
+        degree: "고등학교 졸업",
+        field: "이과",
+        graduation_date: "2019-03",
+        gpa: "",
+        _id: "68d2a31a1c4dd38875bb0381"
+      },
+      {
+        institution: "서울중학교",
+        degree: "중학교 졸업",
+        field: "",
+        graduation_date: "2017-03",
+        gpa: "",
+        _id: "68d2a31a1c4dd38875bb0382"
+      }
+    ],
+    template: "minimal-image",
+    accent_color: "#14B8A6",
+    project: [
+      {
+        name: "팀 협업 기반 업무 관리 시스템",
+        type: "웹 애플리케이션 (생산성 도구)",
+        description:
+          "팀원 간 실시간 태스크 생성·배정·진행 상황을 조회할 수 있는 협업 중심 업무 관리 시스템입니다.",
+        _id: "68d4f882c8f0d46dc8a8b139"
+      },
+      {
+        name: "EduHub 온라인 학습 플랫폼",
+        type: "웹 애플리케이션 (교육 플랫폼)",
+        description:
+          "강의·퀴즈·자료 제공 기능을 갖춘 온라인 교육 플랫폼으로 학습자 경험을 강화했습니다.",
+        _id: "68d4f89dc8f0d46dc8a8b147"
+      }
+    ],
+    updatedAt: "2025-09-23T13:39:38.395Z",
+    createdAt: "2025-09-23T13:39:38.395Z"
+  },
+
+  // ----------------------------------------------------- Resume 2 ------------------------------------------------------
+  {
+    personal_info: {
+      full_name: "이서준",
+      email: "jordan.lee@example.com",
+      phone: "010-9876-5432",
+      location: "부산, 대한민국",
+      linkedin: "https://www.linkedin.com/in/jordanlee",
+      website: "https://www.jordanlee.dev",
+      profession: "프론트엔드 엔지니어",
+      image: dummy_profile
     },
-    {
-        // ----------------------------------------------------- Resume 3 ------------------------------------------------------
-        personal_info: {
-            full_name: "Riley Morgan",
-            email: "riley.morgan@example.com",
-            phone: "0 1122334455",
-            location: "Austin, TX, USA",
-            linkedin: "https://www.linkedin.com/in/rileymorgan",
-            website: "https://www.rileym.dev",
-            profession: "Backend Developer",
-            image: dummy_profile
-        },
-        _id: "89f4c53d3e6gg59397dd259g",
-        userId: "89e3f1cedg3997fgh14f8f09",
-        title: "Riley's Resume",
-        public: true,
-        professional_summary: "Dedicated Backend Developer with 7+ years of experience building secure, high-performance APIs and microservices using Node.js, Python, and PostgreSQL. Passionate about scalability, automation, and clean architecture.",
-        skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Docker", "Kubernetes", "CI/CD", "Redis", "GraphQL", "AWS"],
-        experience: [
-            {
-                company: "DataNest Solutions",
-                position: "Senior Backend Engineer",
-                start_date: "2021-03",
-                end_date: "Present",
-                description: "Developed distributed microservices using Node.js and Docker. Implemented API rate limiting, authentication, and background job processing using Redis and Bull.",
-                is_current: true,
-                _id: "89f4c53d3e6gg59397dd259h"
-            },
-            {
-                company: "CloudCore Systems",
-                position: "Backend Developer",
-                start_date: "2016-07",
-                end_date: "2021-02",
-                description: "Maintained and scaled backend systems built on Python and PostgreSQL. Automated deployments with GitLab CI/CD and improved API response time by 35%.",
-                is_current: false,
-                _id: "89f4c53d3e6gg59397dd259i"
-            }
-        ],
-        education: [
-            {
-                institution: "Texas Institute of Technology",
-                degree: "B.E.",
-                field: "Information Technology",
-                graduation_date: "2016-05",
-                gpa: "3.9",
-                _id: "89f4c53d3e6gg59397dd259j"
-            },
-            {
-                institution: "Central High School",
-                degree: "High School Diploma",
-                field: "Science",
-                graduation_date: "2012-04",
-                gpa: "",
-                _id: "89f4c53d3e6gg59397dd259k"
-            }
-        ],
-        template: "minimal-image",
-        accent_color: "#F59E0B",
-        project: [
-            {
-                name: "Invoicr - Invoice Management System",
-                type: "Web Application (FinTech)",
-                description: "Invoicr is a secure web platform that allows freelancers and small businesses to generate, track, and automate professional invoices. Built with Node.js, MongoDB, and Stripe integration.",
-                _id: "89f4c53d3e6gg59397dd259l"
-            },
-            {
-                name: "API Monitor Dashboard",
-                type: "DevOps Tool",
-                description: "A real-time API monitoring dashboard for microservices. Tracks latency, uptime, and error rates using Prometheus and Grafana.",
-                _id: "89f4c53d3e6gg59397dd259m"
-            }
-        ],
-        updatedAt: "2025-09-25T15:26:49.652Z",
-        createdAt: "2025-09-25T15:26:49.652Z"
-    }
+    _id: "78e3b42c2d5ff49286cc148f",
+    userId: "78d2e0bdcf2886efg03e7e98",
+    title: "이서준 이력서",
+    public: true,
+    professional_summary:
+      "React·Vue 기반의 UI 개발에 강점을 가진 프론트엔드 엔지니어로, 디자인 시스템 구축과 웹 접근성 개선 프로젝트를 주도한 경험이 있습니다.",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Vue.js",
+      "SASS",
+      "Tailwind CSS",
+      "Figma",
+      "Web Accessibility",
+      "REST APIs"
+    ],
+    experience: [
+      {
+        company: "TechSpark Inc.",
+        position: "리드 프론트엔드 엔지니어",
+        start_date: "2022-02",
+        end_date: "Present",
+        description:
+          "프론트엔드 팀을 리딩하며 디자인 시스템 구축, 공통 컴포넌트 아키텍처 설계, UI 성능 최적화 프로젝트를 수행했습니다.",
+        is_current: true,
+        _id: "78e3b42c2d5ff49286cc1490"
+      },
+      {
+        company: "PixelForge Labs",
+        position: "프론트엔드 개발자",
+        start_date: "2018-09",
+        end_date: "2022-01",
+        description:
+          "React·Vue.js 기반 UI 컴포넌트 개발, REST API 연동, SPA 성능 최적화를 담당했습니다.",
+        is_current: false,
+        _id: "78e3b42c2d5ff49286cc1491"
+      }
+    ],
+    education: [
+      {
+        institution: "디지털 아트 대학",
+        degree: "컴퓨터과학 학사",
+        field: "Computer Science",
+        graduation_date: "2018-06",
+        gpa: "3.8/4.0",
+        _id: "78e3b42c2d5ff49286cc1492"
+      },
+      {
+        institution: "부산 중앙고등학교",
+        degree: "고등학교 졸업",
+        field: "이과",
+        graduation_date: "2014-05",
+        gpa: "",
+        _id: "78e3b42c2d5ff49286cc1493"
+      }
+    ],
+    template: "minimal-image",
+    accent_color: "#6366F1",
+    project: [
+      {
+        name: "FitTrack - 피트니스 대시보드",
+        type: "웹 애플리케이션 (헬스/피트니스)",
+        description:
+          "운동 기록, 진행률, 통계를 시각화해 사용자가 자신의 운동 패턴을 한눈에 볼 수 있도록 한 분석 대시보드입니다.",
+        _id: "78e3b42c2d5ff49286cc1494"
+      },
+      {
+        name: "ShopEase - 이커머스 UI 키트",
+        type: "프론트엔드 UI 키트",
+        description:
+          "상품 리스트·장바구니·반응형 메뉴 등 기본 기능을 포함한 모듈형 전자상거래 UI 템플릿입니다.",
+        _id: "78e3b42c2d5ff49286cc1495"
+      }
+    ],
+    updatedAt: "2025-09-25T15:10:21.184Z",
+    createdAt: "2025-09-25T15:10:21.184Z"
+  },
+
+  // ----------------------------------------------------- Resume 3 ------------------------------------------------------
+  {
+    personal_info: {
+      full_name: "박진우",
+      email: "riley.morgan@example.com",
+      phone: "010-1122-3344",
+      location: "대구, 대한민국",
+      linkedin: "https://www.linkedin.com/in/rileymorgan",
+      website: "https://www.rileym.dev",
+      profession: "백엔드 개발자",
+      image: dummy_profile
+    },
+    _id: "89f4c53d3e6gg59397dd259g",
+    userId: "89e3f1cedg3997fgh14f8f09",
+    title: "박진우 이력서",
+    public: true,
+    professional_summary:
+      "Node.js·Python 기반 API 개발 및 마이크로서비스 아키텍처 구축 경험을 보유한 백엔드 개발자로, CI/CD 자동화 및 시스템 성능 개선에 강점을 가지고 있습니다.",
+    skills: [
+      "Node.js",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Redis",
+      "GraphQL",
+      "AWS"
+    ],
+    experience: [
+      {
+        company: "DataNest Solutions",
+        position: "시니어 백엔드 엔지니어",
+        start_date: "2021-03",
+        end_date: "Present",
+        description:
+          "Node.js 기반 마이크로서비스 설계 및 개발, Redis 기반 인증·레이트 리밋팅 시스템 구축, Docker 기반 배포 환경 개선을 담당했습니다.",
+        is_current: true,
+        _id: "89f4c53d3e6gg59397dd259h"
+      },
+      {
+        company: "CloudCore Systems",
+        position: "백엔드 개발자",
+        start_date: "2016-07",
+        end_date: "2021-02",
+        description:
+          "Python·PostgreSQL 기반 백엔드 시스템 유지보수 및 성능 개선, GitLab CI/CD 도입을 통해 배포 프로세스를 자동화했습니다.",
+        is_current: false,
+        _id: "89f4c53d3e6gg59397dd259i"
+      }
+    ],
+    education: [
+      {
+        institution: "텍사스 공과대학",
+        degree: "공학 학사",
+        field: "정보기술",
+        graduation_date: "2016-05",
+        gpa: "3.9/4.0",
+        _id: "89f4c53d3e6gg59397dd259j"
+      },
+      {
+        institution: "대구 중앙고등학교",
+        degree: "고등학교 졸업",
+        field: "이과",
+        graduation_date: "2012-04",
+        gpa: "",
+        _id: "89f4c53d3e6gg59397dd259k"
+      }
+    ],
+    template: "minimal-image",
+    accent_color: "#F59E0B",
+    project: [
+      {
+        name: "Invoicr - 인보이스 관리 시스템",
+        type: "웹 애플리케이션 (핀테크)",
+        description:
+          "Node.js·MongoDB·Stripe 기반의 청구서 자동화 플랫폼으로, 프리랜서 및 소규모 기업을 위한 실용적 청구 관리 기능을 제공합니다.",
+        _id: "89f4c53d3e6gg59397dd259l"
+      },
+      {
+        name: "API 모니터링 대시보드",
+        type: "DevOps 도구",
+        description:
+          "Prometheus·Grafana 기반 API 실시간 모니터링 시스템으로, 응답 시간·가용성·에러율을 시각화합니다.",
+        _id: "89f4c53d3e6gg59397dd259m"
+      }
+    ],
+    updatedAt: "2025-09-25T15:26:49.652Z",
+    createdAt: "2025-09-25T15:26:49.652Z"
+  }
 ]
