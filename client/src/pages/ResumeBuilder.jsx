@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { dummyResumeData } from "../assets/assets";
 
 const initialResumeData = {
   _id: "",
