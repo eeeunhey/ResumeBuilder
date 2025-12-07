@@ -122,7 +122,7 @@ const ResumeBuilder = () => {
                 </div>
 
                 {/* Form Content */}
-                <div className="space">
+                <div className="space-y-6">
 
                 </div>
 
@@ -134,7 +134,11 @@ const ResumeBuilder = () => {
           </div>
 
           {/* 오른쪽 부분 - 미리보기 부분 */}
-          <div></div>
+          <div>
+            {activeSection.id === 'personal' && (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </div>
