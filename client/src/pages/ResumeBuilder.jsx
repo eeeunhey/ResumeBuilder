@@ -22,10 +22,16 @@ const ResumeBuilder = () => {
   const [resumeData, setResumeData] = useState(initialResumeData);
 
   const loadExistingResume = () => {
+    const resume = dummyResumeData.find(resume => resume._id === resumeId)
+   if(!resume) return
 
+   setResumeData({...resume})
+   document.title = resume.title
   }
 
-  useEffect(()=>{},[])
+  useEffect(()=>{
+    loadExistingResume()
+  },[])
 
   return <div></div>;
 };
