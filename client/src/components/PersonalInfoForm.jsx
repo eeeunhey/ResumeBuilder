@@ -28,8 +28,8 @@ const PersonalInfoForm = ({
               className="w-16 h-16 rounded-full object-cover mt-5 ring ring-slate-300 hover:opacity-80"
             />
           ) : (
-            <div>
-              <User />
+            <div className="inline-flex items-center gap-2 mt-5 text-slate-600 hover:text-slate-700 cursor-pointer">
+              <User className="size-10 p-2.5 border rounded-full"/>
               사용하실 프로필 이미지를 선택해 주세요
             </div>
           )}
@@ -40,19 +40,21 @@ const PersonalInfoForm = ({
             onChange={(e) => handleChange("image", e.target.files[0])}
           />
         </label>
-        {typeof data?.image === "object" && 
+        {typeof data?.image === "object" && (
             <div className="flex flex-col gap-1 pl-4 text-sm">
                 <p>배경 제거</p>
-                <label className="">
-                  <input />
-                  <div>
+                <label className="relative inline-flex items-center cursor-pointer text-gray-900 gap-3">
+                  <input type="checkbox" className="sr-only peer" onChange={()=> setRemoveBackground(prev => !prev)}
+                    checked={removeBackground}
+                  />
+                  <div className="w-9 h-5 bg-slate-300 rounded-full peer peer-checked:bg-green-600 transition-colors duration-200">
 
                   </div>
-                  <span>
+                  <span className="dot absolute left-1 top-1 w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-4">
 
                   </span>
                 </label>
-            </div>}
+            </div>)}
       </div>
     </div>
   );
