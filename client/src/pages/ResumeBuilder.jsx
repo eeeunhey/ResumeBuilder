@@ -150,8 +150,11 @@ const ResumeBuilder = () => {
             </div>
             {/* 오른쪽 부분 - 미리보기 부분 */}
 
-            <div>
-              <ResumePreview />
+            <div className="lg:col-span-7 max-lg:mt-6">
+              <div>
+                {/* 버튼구역 */}
+              </div>
+              <ResumePreview data={resumeData} template={resumeData.template} accentColor={resumeData.accent_color}/>
             </div>
           </div>
         </div>
