@@ -17,6 +17,7 @@ import {
 import ResumePreview from "../components/ResumePreview";
 import TemplateSelector from "../components/TemplateSelector";
 import ColorPicker from "../components/ColorPicker";
+import ProfessionalSummaryForm from "../components/ProfessionalSummaryForm";
 
 const initialResumeData = {
   _id: "",
@@ -50,7 +51,7 @@ const ResumeBuilder = () => {
 
   const sections = [
     { id: "personal", name: "Persionla Info", icon: User },
-    { id: " summary", name: "Summary", icon: FileText },
+    { id: "summary", name: "Summary", icon: FileText },
     { id: "exprience", name: "Exprience", icon: Briefcase },
     { id: "education", name: "Education", icon: GraduationCap },
     { id: "projects", name: "Projects", icon: FolderIcon },
@@ -94,10 +95,21 @@ const ResumeBuilder = () => {
                 {/* Section Navigation */}
                 <div className="flex justify-between items-center mb-6 border-b border-gray-300 py-1">
                   <div className="flex items-center gap-2">
-                    
-                <TemplateSelector selectTemplate={resumeData.template} onChange={(template)=>setResumeData(prev => ({...prev, template,})) }/>
-                  <ColorPicker selectedColor={resumeData.accent_color} onChange={(color)=>setResumeData(prev => ({...prev, accent_color:color}))}/>
-                  
+                    <TemplateSelector
+                      selectTemplate={resumeData.template}
+                      onChange={(template) =>
+                        setResumeData((prev) => ({ ...prev, template }))
+                      }
+                    />
+                    <ColorPicker
+                      selectedColor={resumeData.accent_color}
+                      onChange={(color) =>
+                        setResumeData((prev) => ({
+                          ...prev,
+                          accent_color: color,
+                        }))
+                      }
+                    />
                   </div>
 
                   <div className="flex items-center">
@@ -152,15 +164,31 @@ const ResumeBuilder = () => {
                       />
                     </div>
                   )}
+                  {activeSection.id === "summary" && (
+                      <ProfessionalSummaryForm
+                        data={resumeData.professional_summary}
+                        onChange={(data) =>
+                          setResumeData((prev) => ({
+                            ...prev,
+                            professional_summary: data,
+                          }))
+                        }
+                        setResumeData={setResumeData}
+                      />
+
+                  )}
                 </div>
+                <div></div>
               </div>
             </div>
             {/* 오른쪽 부분 - 미리보기 부분 */}
 
             <div className="lg:col-span-7 max-lg:mt-6">
-
-
-              <ResumePreview data={resumeData} template={resumeData.template} accentColor={resumeData.accent_color}/>
+              <ResumePreview
+                data={resumeData}
+                template={resumeData.template}
+                accentColor={resumeData.accent_color}
+              />
             </div>
           </div>
         </div>
