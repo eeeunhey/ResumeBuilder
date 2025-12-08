@@ -92,7 +92,10 @@ const ResumeBuilder = () => {
 
                 {/* Section Navigation */}
                 <div className="flex justify-between items-center mb-6 border-b border-gray-300 py-1">
-                  <div></div>
+                  <div>
+                    
+                <TemplateSelector selectTemplate={resumeData.template} onChange={(template)=>setResumeData(prev => ({...prev, template,})) }/>
+                  </div>
 
                   <div className="flex items-center">
                     {activeSectionIndex !== 0 && (
@@ -152,10 +155,8 @@ const ResumeBuilder = () => {
             {/* 오른쪽 부분 - 미리보기 부분 */}
 
             <div className="lg:col-span-7 max-lg:mt-6">
-              <div>
-                버튼
-                {/* <TemplateSelector selectTemplate={resumeData.template} onChange={(template)=>setResumeData(prev => ({...prev, template}))}/> */}
-              </div>
+
+
               <ResumePreview data={resumeData} template={resumeData.template} accentColor={resumeData.accent_color}/>
             </div>
           </div>
