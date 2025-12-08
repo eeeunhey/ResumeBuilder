@@ -15,6 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import ResumePreview from "../components/ResumePreview";
+import TemplateSelector from "../components/TemplateSelector";
 
 const initialResumeData = {
   _id: "",
@@ -152,7 +153,8 @@ const ResumeBuilder = () => {
 
             <div className="lg:col-span-7 max-lg:mt-6">
               <div>
-                {/* 버튼구역 */}
+                버튼
+                {/* <TemplateSelector selectTemplate={resumeData.template} onChange={(template)=>setResumeData(prev => ({...prev, template}))}/> */}
               </div>
               <ResumePreview data={resumeData} template={resumeData.template} accentColor={resumeData.accent_color}/>
             </div>
