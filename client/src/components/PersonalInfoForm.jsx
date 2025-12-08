@@ -38,7 +38,7 @@ const PersonalInfoForm = ({
     },
     { key: "phone", label: "연락처", icon: Phone, type: "tel" },
     { key: "location", label: "지역", icon: MapPin, type: "text" },
-    { key: "profession", label: "회사", icon: BriefcaseBusiness, type: "text" },
+    { key: "profession", label: "직무", icon: BriefcaseBusiness, type: "text" },
     { key: "linkedin", label: "Linkedin 프로필", icon: Linkedin, type: "url" },
     { key: "website", label: "개인 웹사이트 주소", icon: Globe, type: "url" },
     { key: "github", label: "깃허브 주소", icon: Github, type: "url" },

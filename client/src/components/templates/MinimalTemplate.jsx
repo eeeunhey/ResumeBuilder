@@ -127,4 +127,4 @@ const MinimalTemplate = ({ data, accentColor }) => {
     );
 }
 
-export default MinimalTemplate;
+export {MinimalTemplate};

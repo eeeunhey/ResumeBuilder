@@ -186,4 +186,4 @@ const MinimalImageTemplate = ({ data, accentColor }) => {
 }
 
 
-export default MinimalImageTemplate;
+export {MinimalImageTemplate};
