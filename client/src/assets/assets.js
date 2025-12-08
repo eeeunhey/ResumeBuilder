@@ -11,6 +11,7 @@ export const dummyResumeData = [
       linkedin: "https://www.linkedin.com",
       website: "https://www.example.com",
       profession: "풀스택 개발자",
+      github:"https://github.com/eeeunhey",
       image: dummy_profile
     },
     _id: "68d2a31a1c4dd38875bb037e",
