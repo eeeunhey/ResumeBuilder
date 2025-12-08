@@ -20,7 +20,7 @@ const TemplateSelector = ({ selectTemplate, onChange }) => {
     },
 
     {
-      id: "minimal Image",
+      id: "minimal-image",
       name: "Minimal Image",
       preview:
         "한 장의 이미지를 중심으로 깔끔한 글꼴과 단정한 레이아웃을 더해, 내용을 담백하게 전달하고 싶은 분들에게 잘 어울리는 미니멀 스타일 템플릿입니다. ",
