@@ -14,6 +14,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import ResumePreview from "../components/ResumePreview";
 
 const initialResumeData = {
   _id: "",
@@ -150,7 +151,7 @@ const ResumeBuilder = () => {
             {/* 오른쪽 부분 - 미리보기 부분 */}
 
             <div>
-              미리보기 부분임
+              <ResumePreview />
             </div>
           </div>
         </div>
