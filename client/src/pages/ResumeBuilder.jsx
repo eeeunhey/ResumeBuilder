@@ -96,7 +96,7 @@ const ResumeBuilder = () => {
                   <div className="flex items-center gap-2">
                     
                 <TemplateSelector selectTemplate={resumeData.template} onChange={(template)=>setResumeData(prev => ({...prev, template,})) }/>
-                  <ColorPicker selectedColor={resumeData.accent_color}/>
+                  <ColorPicker selectedColor={resumeData.accent_color} onChange={(color)=>setResumeData(prev => ({...prev, accent_color:color}))}/>
                   
                   </div>
 
