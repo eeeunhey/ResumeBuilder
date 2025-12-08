@@ -128,25 +128,32 @@ const ResumeBuilder = () => {
                 </div>
 
                 {/* Form Content */}
-                <div className="space-y-6"></div>
+                <div className="space-y-6">
+
+          {/* 오른쪽 부분 - 미리보기 부분 */}
+            {activeSection.id === "personal" && (
+              <div>
+                <PersonalInfoForm
+                  data={resumeData.personal_info}
+                  onChange={(data)=>setResumeData(prev => ({...prev, personal_info:data}))}
+                  removeBackground={removeBackground}
+                  setRemoveBackground={setRemoveBackground}
+                />
+              </div>
+            )}
+
+                </div>
               </div>
               {/* {sections.map((menu) => {
                 return <p key={menu.id}>{menu.name}</p>;
               })} */}
             </div>
+
+            
+            
           </div>
 
-          {/* 오른쪽 부분 - 미리보기 부분 */}
-          <div>
-            {activeSection.id === "personal" && (
-              <div>
-                <PersonalInfoForm
-                  data={resumeData.personal_info}
-                  removeBackground={removeBackground}
-                />
-              </div>
-            )}
-          </div>
+
         </div>
       </div>
     </div>
