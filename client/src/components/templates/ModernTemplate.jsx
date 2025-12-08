@@ -173,4 +173,4 @@ const ModernTemplate = ({ data, accentColor }) => {
 	);
 }
 
-export default ModernTemplate;
+export {ModernTemplate};
