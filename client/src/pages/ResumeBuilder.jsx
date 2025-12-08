@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import ResumePreview from "../components/ResumePreview";
 import TemplateSelector from "../components/TemplateSelector";
+import ColorPicker from "../components/ColorPicker";
 
 const initialResumeData = {
   _id: "",
@@ -95,6 +96,8 @@ const ResumeBuilder = () => {
                   <div className="flex items-center gap-2">
                     
                 <TemplateSelector selectTemplate={resumeData.template} onChange={(template)=>setResumeData(prev => ({...prev, template,})) }/>
+                  <ColorPicker selectedColor={resumeData.accent_color}/>
+                  
                   </div>
 
                   <div className="flex items-center">
