@@ -15,7 +15,7 @@ const ProfessionalSummaryForm = ({ data, onChange, setResumeData }) => {
         </div>
         <button className="flex items-center gap-2 px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded hover:bg-purple-200 transition-colors disabled:opacity-50">
           <Sparkle className="size-4" />
-          AI 자동 개선
+         AI 자동 개선
         </button>
       </div>
 
