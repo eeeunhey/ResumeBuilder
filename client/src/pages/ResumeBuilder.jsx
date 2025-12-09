@@ -19,6 +19,7 @@ import TemplateSelector from "../components/TemplateSelector";
 import ColorPicker from "../components/ColorPicker";
 import ProfessionalSummaryForm from "../components/ProfessionalSummaryForm";
 import ExperienceForm from "../components/ExperienceForm";
+import EducationForm from "../components/EducationForm";
 
 const initialResumeData = {
   _id: "",
@@ -166,29 +167,41 @@ const ResumeBuilder = () => {
                     </div>
                   )}
                   {activeSection.id === "summary" && (
-                      <ProfessionalSummaryForm
-                        data={resumeData.professional_summary}
-                        onChange={(data) =>
-                          setResumeData((prev) => ({
-                            ...prev,
-                            professional_summary: data,
-                          }))
-                        }
-                        setResumeData={setResumeData}
-                      />
-
+                    <ProfessionalSummaryForm
+                      data={resumeData.professional_summary}
+                      onChange={(data) =>
+                        setResumeData((prev) => ({
+                          ...prev,
+                          professional_summary: data,
+                        }))
+                      }
+                      setResumeData={setResumeData}
+                    />
                   )}
                   {activeSection.id === "exprience" && (
-                    <ExperienceForm data={resumeData.experience} onChange={(data) => setResumeData((prev) => ({
-                      ...prev,
-                      experience:data,
-                    }))
-                  }
-                    setResumeData={setResumeData}
-                  />
-                  )
-
-                  }
+                    <ExperienceForm
+                      data={resumeData.experience}
+                      onChange={(data) =>
+                        setResumeData((prev) => ({
+                          ...prev,
+                          experience: data,
+                        }))
+                      }
+                      setResumeData={setResumeData}
+                    />
+                  )}
+                  {activeSection.id === "education" && (
+                    <EducationForm
+                      data={resumeData.education}
+                      onChange={(data) =>
+                        setResumeData((prev) => ({
+                          ...prev,
+                          education: data,
+                        }))
+                      }
+                      setResumeData={setResumeData}
+                    />
+                  )}
                 </div>
                 <div></div>
               </div>
