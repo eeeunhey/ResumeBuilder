@@ -18,6 +18,7 @@ import ResumePreview from "../components/ResumePreview";
 import TemplateSelector from "../components/TemplateSelector";
 import ColorPicker from "../components/ColorPicker";
 import ProfessionalSummaryForm from "../components/ProfessionalSummaryForm";
+import ExperienceForm from "../components/ExperienceForm";
 
 const initialResumeData = {
   _id: "",
@@ -177,6 +178,11 @@ const ResumeBuilder = () => {
                       />
 
                   )}
+                  {activeSection.id === "exprience" && (
+                    <ExperienceForm />
+                  )
+
+                  }
                 </div>
                 <div></div>
               </div>
