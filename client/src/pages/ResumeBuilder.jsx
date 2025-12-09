@@ -179,7 +179,13 @@ const ResumeBuilder = () => {
 
                   )}
                   {activeSection.id === "exprience" && (
-                    <ExperienceForm />
+                    <ExperienceForm data={resumeData.experience} onChange={(data) => setResumeData((prev) => ({
+                      ...prev,
+                      experience:data,
+                    }))
+                  }
+                    setResumeData={setResumeData}
+                  />
                   )
 
                   }
