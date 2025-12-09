@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { dummyResumeData } from "../assets/assets";
-import PersonalInfoForm from "../components/PersonalInfoForm";
 import { Link } from "react-router-dom";
+import TemplateSelector from "../components/TemplateSelector"
+import ColorPicker from "../components/ColorPicker"
+import ResumePreview from "../components/ResumePreview"
 import {
   ArrowLeftIcon,
   Briefcase,
@@ -14,14 +16,14 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import ResumePreview from "../components/ResumePreview";
-import TemplateSelector from "../components/TemplateSelector";
-import ColorPicker from "../components/ColorPicker";
-import ProfessionalSummaryForm from "../components/ProfessionalSummaryForm";
-import ExperienceForm from "../components/ExperienceForm";
-import EducationForm from "../components/EducationForm";
-import ProjectForm from "../components/ProjectForm";
-import SkillsForm from "../components/SkillsForm";
+import {
+  EducationForm,
+  ExperienceForm,
+  PersonalInfoForm,
+  ProfessionalSummaryForm,
+  ProjectForm,
+  SkillsForm,
+} from "../components/Form/index";
 
 const initialResumeData = {
   _id: "",

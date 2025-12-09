@@ -148,4 +148,4 @@ const ExperienceForm = ({ data, onChange }) => {
   );
 };
 
-export default ExperienceForm;
+export {ExperienceForm};

@@ -37,4 +37,4 @@ const ProfessionalSummaryForm = ({ data, onChange, setResumeData }) => {
   );
 };
 
-export default ProfessionalSummaryForm;
+export {ProfessionalSummaryForm};

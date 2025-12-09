@@ -124,4 +124,4 @@ const EducationForm = ({ data, onChange }) => {
   );
 };
 
-export default EducationForm;
+export {EducationForm};

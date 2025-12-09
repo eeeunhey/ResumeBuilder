@@ -125,4 +125,4 @@ const PersonalInfoForm = ({
   );
 };
 
-export default PersonalInfoForm;
+export {PersonalInfoForm};

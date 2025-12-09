@@ -83,4 +83,4 @@ const ProjectForm = ({ data, onChange }) => {
   );
 };
 
-export default ProjectForm;
+export {ProjectForm};
