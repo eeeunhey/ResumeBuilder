@@ -25,6 +25,8 @@ import {
   SkillsForm,
 } from "../components/Form/index";
 
+
+
 const initialResumeData = {
   _id: "",
   title: "",
@@ -216,7 +218,6 @@ const ResumeBuilder = () => {
                           project: data,
                         }))
                       }
-                      setResumeData={setResumeData}
                     />
                   )}
 
@@ -229,11 +230,14 @@ const ResumeBuilder = () => {
                           skills: data,
                         }))
                       }
-                      setResumeData={setResumeData}
                     />
                   )}
                 </div>
-                <div></div>
+                <button className="bg-gradient-to-br from-green-100 to-green-200 ring-green-300 text-green-600 ring hover:ring-green-400
+                transition-all rounded-md px-6 py-2 mt-6 text-sm
+                ">
+                  저장하기
+                </button>
               </div>
             </div>
             {/* 오른쪽 부분 - 미리보기 부분 */}
