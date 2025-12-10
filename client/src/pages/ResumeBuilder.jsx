@@ -76,6 +76,25 @@ const ResumeBuilder = () => {
     loadExistingResume();
   }, []);
 
+  const changeResumeVisibility = async() =>{
+    setResumeData({...resumeData, public: !resumeData.public})
+  }
+
+  const handleShare = () => {
+    const frontendUrl = window.location.href.split('/app/')[0];
+    const resumeUrl = frontendUrl + '/view/' + resumeId;
+
+    if(navigator.share) {
+      navigator.share({url: resumeUrl, text: "My Resume",})
+    } else {
+      alert('현재 사용 중인 브라우저에는 공유 기능이 지원되지 않습니다.')
+    }
+  }
+
+  const downloadResume = () => {
+    window.print();
+  }
+
   return (
     <div>
       <div className="max-w-7xl mx-auto px-4 py-6">
@@ -244,26 +263,29 @@ const ResumeBuilder = () => {
                 </button>
               </div>
             </div>
-            {/* 옵션 버튼 */}
 
             <div className="lg:col-span-7 max-lg:mt-6">
               <div className="relative w-full">
                 <div className="absolute bottom-3 left-0 right-0 flex items-center justify-end gap-2">
                   {resumeData.public && (
                     <button
-                    className="flex items-center p-2 px-4 gap-2 text-xs bg-gradient-to-br from-blue-100 to-blue-600 rounded-lg ring-blue-300 hover:ring transition-colors"
+                    onClick={handleShare}
+                    className="flex items-center p-2 px-4 gap-2 text-xs bg-gradient-to-br text-blue-600 from-blue-100 to-blue-200 rounded-lg ring-blue-500 hover:ring transition-colors"
                     >
-                      <Share2Icon className="size-4"/>
+                      <Share2Icon className="size-4"/> Share
                     </button>
                   )}
                   <button 
+                  onClick={changeResumeVisibility}
                   className="flex items-center p-2 px-4 gap-2 text-xs bg-gradient-to-br from-purple-100 to-purple-200 text-purple-600
                   ring-purple-300 rounded-lg hover:ring transition-colors"
                   >
                     {resumeData.public ? <EyeIcon className="size-4" /> : <EyeOffIcon className="size-4" />}
                     {resumeData.public ? "Public" : "Private"}
                   </button>
+
                   <button 
+                  onClick={downloadResume}
                   className="flex items-center p-2 px-4 gap-2 text-xs bg-gradient-to-br from-green-100 to-green-200 text-green-600
                   ring-green-600 rounded-lg hover:ring transition-colors"
                   >
