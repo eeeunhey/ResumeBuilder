@@ -20,6 +20,7 @@ const ResumePreview = ({ data, template, accentColor, classes = " " }) => {
   return (
     <div className="w-full bg-gray-100">
       <div
+      id="resume-preview"
         className={
           "border border-gray-200 print:shadow-none print:border-none" + classes
         }
@@ -27,8 +28,8 @@ const ResumePreview = ({ data, template, accentColor, classes = " " }) => {
         {renderTemplate()}
       </div>
 
-      <style jsx>{`
-        /* 페이지 인쇄 기본 설정 */
+      <style>{`
+
         @page {
           size: letter;
           margin: 0;
