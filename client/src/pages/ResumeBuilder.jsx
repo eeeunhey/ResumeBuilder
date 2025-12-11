@@ -64,7 +64,7 @@ const ResumeBuilder = () => {
   const sections = [
     { id: "personal", name: "Persionla Info", icon: User },
     { id: "summary", name: "Summary", icon: FileText },
-    { id: "exprience", name: "Exprience", icon: Briefcase },
+    { id: "experience", name: "Experience", icon: Briefcase },
     { id: "education", name: "Education", icon: GraduationCap },
     { id: "projects", name: "Projects", icon: FolderIcon },
     { id: "skills", name: "Skills", icon: Sparkles },
@@ -76,7 +76,7 @@ const ResumeBuilder = () => {
     loadExistingResume();
   }, []);
 
-  const changeResumeVisibility = async() =>{
+  const changeResumeVisibility = () =>{
     setResumeData({...resumeData, public: !resumeData.public})
   }
 
@@ -207,7 +207,7 @@ const ResumeBuilder = () => {
                       setResumeData={setResumeData}
                     />
                   )}
-                  {activeSection.id === "exprience" && (
+                  {activeSection.id === "experience" && (
                     <ExperienceForm
                       data={resumeData.experience}
                       onChange={(data) =>
