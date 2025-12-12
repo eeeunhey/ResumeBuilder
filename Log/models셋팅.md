@@ -38,5 +38,38 @@ toJSON → API 응답 데이터 정리
 collection → 실제 컬렉션 이름 제어
 
 
-3) 인스턴스 메서드 추가 (비밀번호 비교)
+3) User 한 명 한 명이 공통으로 사용할 수 있는 함수를 추가 (비밀번호 비교하기)
 `UserSchema.methods.comparePassword = function (password) {`
+UserSchema.methods.comparePassword[User객체가 가지고 있는 비밀번호 값 ] = function (password) [로그인 시 입력한 값]
+그 둘을 비교함
+
+`return bcrypt.compareSync(password, this.password);`
+this.password === user.password
+DB에 저장된 해시 비밀번호 비교
+
+---
+    bcrypt 값 비교 예시
+    상황 예시
+
+    ```
+    회원가입 때
+    password = "1234"
+    → bcrypt로 변환
+    → "$2a$10$askdfjlasdjfl..."
+    → DB에 저장
+    ```
+
+    ```
+    로그인 때
+    입력: "1234"
+    DB: "$2a$10$askdfjlasdjfl..."
+
+    비교 방식
+    bcrypt.compare("1234", "$2a$10$askdfjlasdjfl...")
+    ```
+
+    "1234"를 같은 방식으로 암호화해보고 결과가 DB 값과 같은지 비교
+    같으면 true, 다르면 false 비밀번호 원문을 다시 꺼내보는 일은 없음
+---
+
+bcrypt.compareSync(...)
