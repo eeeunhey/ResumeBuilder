@@ -12,3 +12,37 @@ Accesss List Entry 0.0.0.0/0 으로 자동 셋팅된다 그걸 저장하고 나�
 Status Active 로 바뀌면 잘 완료된것이다
 
 db.js를 만든다
+1. mongoose 불러오기
+`import mongoose from "mongoose"`
+2. connectDB 함수 생성
+`const connectDB = async () = {}`
+3. DB 연결 이벤트 등록
+4. 환경변수에서 URL 가져오기
+5. 프로젝트(DB) 이름 설정
+6. 환경변수 검증
+7. URL 문자열 정리
+8. mongoose.connect 실행
+```
+try {
+    <!-- 3. -->
+    mongoose.connection.on("connected", () => {console.log("데이터베이스 연결이 완료되었습니다")})
+    <!-- 4 -->
+    let mongodbURL = process.env.mongodbURL
+    <!-- 5 -->
+    const projectName = "resume-builder"
+    <!-- 6 -->
+    if (!mogodbURL) {
+        throw new Error("MongoDB URL 환경변수가 설정되지 않았습니다")
+    }
+    <!-- 7 -->
+    if (mongodbURL.endsWith("/")) {
+        mongodbURL = mongodbURL.slice(0, -1)
+    }
+    <!-- 8 -->
+    awite mongoose.connet(`${mongodbURL}/${projectName}`)
+}
+```
+
+9. 함수 export
+`export default connectDB`
+

@@ -43,3 +43,27 @@ export const registerUser = async (req, res) => {
         return res.status(400).json({message:error.message})
     }
 }
+
+// controller for user login
+// POST: /api/users/login
+
+export const loginUser = async() => {
+    try{
+        const {email, password} = req.body;
+
+        // 기존 사용자인지 확인
+        const user = await User.findOne({email})
+        if(!user) {
+            return res.status(400).json({message:'email 또는 비밀번호가 틀렸습니다'})
+        }
+        
+        // 비밀번호 확인하기
+        const isMatch = await user.comparePassword(password)
+        if(!isMatch) {
+            return res.status(400).json({massge:'email 또는 비밀번호가 틀렸습니다'})
+        }
+
+    } catch(error) {
+        return res.status(400).json({message:error.message})
+    }
+}
