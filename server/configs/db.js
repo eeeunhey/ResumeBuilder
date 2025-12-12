@@ -18,5 +18,9 @@ const connectDB = async () => {
     }
 
     await mongoose.connect(`${mongodbURL}/${projectName}`);
-  } catch (error) {}
-};
+  } catch (error) {
+    console.log("MongoDB 연결 중 오류가 발생했습니다." , error)
+  }
+}
+
+export default connectDB;
