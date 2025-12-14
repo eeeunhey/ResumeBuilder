@@ -4,6 +4,7 @@
 import User from "../models/User.js"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
+import Resume from "../models/Resume.js"
 
 const generateToken = (userId) => {
     const token = jwt.sign({userId}, process.env.JWT_SECRET, {expiresIn: '7d'})
@@ -63,7 +64,47 @@ export const loginUser = async() => {
             return res.status(400).json({massge:'email 또는 비밀번호가 틀렸습니다'})
         }
 
+        // 로그인 완료 시 반환하는 메세지
+        const token = generateToken(user._id)
+        user.password = undefined;
+
+        return res.status(200).josn({message: '로그인되었습니다',token, user})
+
     } catch(error) {
         return res.status(400).json({message:error.message})
+    }
+}
+
+// 사용자 ID를 기준으로 사용자 정보를 가져오는 컨트롤러
+// GET: /api/users/data
+
+export const getUserById = async (req, res) => {
+    try{
+        const userId = req.userId;
+
+        const user = await User.findById(userId)
+        if(!user) {
+            return res.status(404).json({message: error.massage})
+        }
+
+        user.password = undefined;
+        return res.status(200).json({massage})
+        
+    }catch(error) {
+        return res.status(400).json({message: error.message})
+    }
+}
+
+// controller for getting user resumes
+// GET: /api/users/resumes
+
+export const getUserResumes = async(req, res) => {
+    try {
+        const userId = req.userId;
+        // 사용자 이력서 반환
+        const resumes = await Resume.find({userId})
+        return res.status(200).json({resumes})
+    } catch(error) {
+        return res.status(400).json({message: error.message})
     }
 }
