@@ -6,7 +6,7 @@ const connectDB = async () => {
       console.log("데이터 베이스  연결이 완료돠었습니다");
     });
 
-    let mongodbURL = process.env.mongodbURL;
+    let mongodbURL = process.env.MONGODB_URL;
     const projectName = "resume-builder";
 
     if (!mongodbURL) {

@@ -1,4 +1,4 @@
-import Resume from "../models/Resume";
+import Resume from "../models/Resume.js";
 
 // 새로운 이력서 생성을 위한 컨트롤러
 // POST: /api/resumes/create
