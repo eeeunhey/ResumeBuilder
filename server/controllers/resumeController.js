@@ -1,4 +1,6 @@
+import imageKit from "../configs/imageKit.js";
 import Resume from "../models/Resume.js";
+import fs from 'fs'
 
 // 새로운 이력서 생성을 위한 컨트롤러
 // POST: /api/resumes/create
@@ -84,11 +86,28 @@ export const updateResume = async (req, res) => {
     try {
         const userId = req.userId;
         const {resumeId, resumeData, removeBackground} = req.body
-        const image = req.file
+        const image = req.file;
 
         let resumeDataCopy = JSON.parse(resumeData);
-        const resume = await Resume.findOneAndUpdate({userId, _id: resumeId}, resumeDataCopy, {new:true})
-        
+        const resume = await Resume.findByAndUpdate({userId, _id: resumeId}, resumeDataCopy, {new:true})
+        if(image) {
+            
+            const imageBufferData = fs.createReadStream(image.path)
+
+            const response = await imageKit.files.upload({
+                file: fs.createReadStream('path/to/file'),
+                fileName: 'resume.png',
+                folder: 'user-resumes',
+                transformation: {
+                    pre: 'w-300, h-300, fo-face, z-0.75' + 
+                    (removeBackground ? 'e-bgremove' : '')
+                }
+            });
+
+            resumeDataCopy.personal_info.image = response.url
+            
+        }
+
         return res.status(200).json({message:'수정 완료'}, resume )
     } catch(error) {
         return res.status(400).json({message: error.message})

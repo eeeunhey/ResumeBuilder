@@ -15,6 +15,7 @@ app.use(cors())
 
 app.get('/', (req, res) => res.send("서버 연결이 완료되었습니다."))
 app.use('/api/users', userRouter)
+app.use('/api/resumes', resumeRouter)
 
 app.listen(PORT, () => {
     console.log(`연결 서버 포트 번호입니다 ${PORT}` )
